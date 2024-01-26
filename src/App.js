@@ -1,9 +1,11 @@
 import Routes from "./Routes";
-import { Footer } from "./components";
+import { Footer, Header } from "./components";
+import { appStyles } from "./styles";
 
 function App() {
   return (
     <div>
+      <Header />
       <Routes />
       <Footer />
     </div>
