@@ -1,3 +1,3 @@
 import LOGO from "./logo.png";
-
-export { LOGO };
+import CARDBACKGROUND from "./card.png";
+export { LOGO, CARDBACKGROUND };
