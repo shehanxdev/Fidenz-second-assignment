@@ -8,4 +8,8 @@ body {
   background-color: rgb(30, 32, 39) !important;
   background-size: auto;
   background-position-x: center;
+  font-family: "Source Sans 3", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }/*# sourceMappingURL=App.style.css.map */

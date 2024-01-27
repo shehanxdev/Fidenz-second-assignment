@@ -33,3 +33,13 @@ export function formatDate() {
   const data = currentTime + ", " + monthName + " " + date;
   return data;
 }
+
+export function extractCityCodes(cityArray) {
+  const cityIds = [];
+
+  for (const city of cityArray) {
+    cityIds.push(city.CityCode);
+  }
+
+  return cityIds;
+}
