@@ -3,12 +3,12 @@ import {
   Routes as BaseRoutes,
   Route,
 } from "react-router-dom";
-import { Home } from "./pages";
+import { CityProfile, Home } from "./pages";
 const Routes = () => (
   <Router>
     <BaseRoutes>
       <Route path="/" element={<Home />} />
-      {/* <Route path="/city/:cityCode" element={<WeatherData />} /> */}
+      <Route path="/city/:cityCode" element={<CityProfile />} />
     </BaseRoutes>
   </Router>
 );

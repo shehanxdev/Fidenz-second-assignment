@@ -6,7 +6,10 @@ import { CARD_COLORS } from "../../constants";
 import { CARDBACKGROUND } from "../../images";
 import { WeatherCardFooter } from "../WeatherCardFooter";
 
+import { Navigate, useNavigate } from "react-router-dom";
+
 export function CompactWeatherCard({ weatherData, bgColor }) {
+  const navigate = useNavigate();
   const customCardStyles = {
     backgroundColor: bgColor,
     backgroundImage: `url(${CARDBACKGROUND})`,
@@ -15,9 +18,8 @@ export function CompactWeatherCard({ weatherData, bgColor }) {
     backgroundPositionX: "center",
   };
   const navigateToExpandedCardView = () => {
-    alert("hello");
+    navigate(`city/${weatherData.name}`, { state: weatherData });
   };
-
   return (
     <div
       className=" text-light d-flex flex-column rounded-3 overflow-hidden"
