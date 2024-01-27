@@ -18,14 +18,14 @@ export function CompactWeatherCard({ weatherData, bgColor }) {
     backgroundPositionX: "center",
   };
   const navigateToExpandedCardView = () => {
-    navigate(`city/${weatherData.name}`, { state: weatherData });
+    navigate(`city/${weatherData.name}`, { state: { weatherData, bgColor } });
   };
   return (
     <div
       className=" text-light d-flex flex-column rounded-3 overflow-hidden"
       onClick={navigateToExpandedCardView}
     >
-      <div className="p-2" style={customCardStyles}>
+      <div className="p-3" style={customCardStyles}>
         <div className="d-flex justify-content-end">
           <FontAwesomeIcon icon={faClose} style={{ color: "white" }} />
         </div>
