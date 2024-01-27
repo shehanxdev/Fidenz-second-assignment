@@ -1,20 +1,18 @@
-export const COLORS = [
-  "#388EE7",
-  "#8B49CC",
-  "#3C882C",
-  "#C63F3F",
-  "#6249CC",
-  "#1B127B",
-  "#D847DB",
-  "#138E78",
-  "#FF5733",
-  "#66CC99",
-  "#E74C3C",
-  "#F39C12",
-  "#3498DB",
-  "#9B59B6",
-  "#27AE60",
-  "#F1C40F",
+export const CARD_COLORS = {
+  grey: "#585a61",
+  skyBlue: "#388EE7",
+  green: "#40B681",
+  purple: "#6249CC",
+  orange: "#DE944E",
+  red: "#9C3A3A",
+};
+//*To be access using index
+export const CARD_COLORS_ARRAY = [
+  CARD_COLORS.skyBlue,
+  CARD_COLORS.green,
+  CARD_COLORS.orange,
+  CARD_COLORS.purple,
+  CARD_COLORS.red,
 ];
 
 export const LOCAL_STORAGE_KEY = "cachedWeatherData";

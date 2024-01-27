@@ -1,23 +1,35 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import { CARD_COLORS } from "../../constants";
 
-export function WeatherCardFooter(weatherData) {
+export function WeatherCardFooter({ weatherData }) {
   const customBorderStyles = {
-    border: "1px solid #383B47",
+    border: `1px solid ${CARD_COLORS.grey}`,
   };
   return (
     <div>
-      <div className="d-flex justify-content-center gap-3 p-4 bg-dark">
+      <div
+        className="d-flex justify-content-center gap-3 p-4 "
+        style={{ backgroundColor: "#383B47" }}
+      >
         <div className="d-flex flex-column">
-          <span>Pressure: 1018hPa</span>
-          <span>Humidity: 78%</span>
-          <span>Visibility: 8.0km</span>
+          <span>{`Pressure: ${weatherData.pressure}hPa`}</span>
+          <span>{`Humidity: ${weatherData.humidity}%`}</span>
+          <span>{`Visibility: ${(weatherData.visibility / 1000).toFixed(
+            0
+          )}km`}</span>
         </div>
         <div style={customBorderStyles}></div>
-        <div className="d-flex flex-column justify-content-center">
-          <FontAwesomeIcon icon={faLocationArrow} style={{ color: "white" }} />
-          <span>4.0m/s 120 Degree</span>
+        <div className="d-flex flex-column justify-content-center gap-2">
+          <FontAwesomeIcon
+            icon={faLocationArrow}
+            size="2x"
+            style={{ color: "white" }}
+          />
+          <span>{`${weatherData.speed.toFixed(1)}m/s ${
+            weatherData.deg
+          } Degree`}</span>
         </div>
         <div style={customBorderStyles}></div>
         <div className="d-flex flex-column justify-content-center">

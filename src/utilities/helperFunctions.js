@@ -43,3 +43,52 @@ export function extractCityCodes(cityArray) {
 
   return cityIds;
 }
+
+export function extractWeatherData(weatherDataArray) {
+  const extractedData = weatherDataArray.map((data) => {
+    const {
+      coord,
+      sys: { sunrise, sunset, country },
+      weather: [{ description }],
+      main: { temp, pressure, humidity, temp_min, temp_max },
+      visibility,
+      wind: { speed, deg },
+      clouds: { all },
+      dt,
+      id,
+      name,
+    } = data;
+
+    return {
+      coord,
+      sunrise,
+      sunset,
+      country,
+      description,
+      temp,
+      pressure,
+      humidity,
+      temp_min,
+      temp_max,
+      visibility,
+      speed,
+      deg,
+      all,
+      dt,
+      id,
+      name,
+    };
+  });
+
+  return extractedData;
+}
+//*NOTE: this fucntion has not yet been used
+// export function extractTime(milliseconds) {
+//   const date = new Date(milliseconds);
+//   const hours = date.getHours();
+//   const minutes = date.getMinutes();
+//   const ampm = hours >= 12 ? "pm" : "am";
+//   const formattedHours = hours % 12 || 12;
+
+//   return `${formattedHours}:${String(minutes).padStart(2, "0")} ${ampm}`;
+// }
