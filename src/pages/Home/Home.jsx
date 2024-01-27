@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CompactWeatherCard } from "../../components";
+import { CompactWeatherCard, SearchBar } from "../../components";
 import { HttpService, localStorageService } from "../../services";
 import cityData from "./cities.json";
 import { extractCityCodes, extractWeatherData } from "../../utilities";
@@ -62,9 +62,12 @@ export const Home = () => {
 
   if (weatherData) {
     return (
-      <div className="d-flex justify-content-center px-5 d-md-block w-100 my-5">
-        <div className="my-5 m-md-auto" style={{ width: "fit-content" }}>
-          {renderWeatherTiles()}
+      <div className="my-4 my-md-5">
+        <SearchBar />
+        <div className="d-flex justify-content-center px-5 d-md-block w-100 my-md-5">
+          <div className="my-5 m-md-auto" style={{ width: "fit-content" }}>
+            {renderWeatherTiles()}
+          </div>
         </div>
       </div>
     );
