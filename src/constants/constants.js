@@ -5,6 +5,7 @@ export const CARD_COLORS = {
   purple: "#6249CC",
   orange: "#DE944E",
   red: "#9C3A3A",
+  black: "#1F2128",
 };
 //*To be access using index
 export const CARD_COLORS_ARRAY = [
