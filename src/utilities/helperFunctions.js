@@ -49,7 +49,7 @@ export function extractWeatherData(weatherDataArray) {
     const {
       coord,
       sys: { sunrise, sunset, country },
-      weather: [{ description }],
+      weather: [{ description, icon }],
       main: { temp, pressure, humidity, temp_min, temp_max },
       visibility,
       wind: { speed, deg },
@@ -65,6 +65,7 @@ export function extractWeatherData(weatherDataArray) {
       sunset,
       country,
       description,
+      icon,
       temp,
       pressure,
       humidity,

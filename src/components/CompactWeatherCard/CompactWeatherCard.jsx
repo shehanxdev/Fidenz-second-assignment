@@ -37,6 +37,10 @@ export function CompactWeatherCard({ weatherData, bgColor }) {
               <span className="align-self-center">{formatDate()}</span>
             </div>
             <div className="align-self-center fs-5">
+              <img
+                src={`http://openweathermap.org/img/w/${weatherData.icon}.png`}
+                alt="weather-icon"
+              />
               {weatherData.description}
             </div>
           </div>
