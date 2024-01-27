@@ -16,3 +16,7 @@ export const COLORS = [
   "#27AE60",
   "#F1C40F",
 ];
+
+export const LOCAL_STORAGE_KEY = "cachedWeatherData";
+
+export const expirationTime = 5 * 60 * 1000;
