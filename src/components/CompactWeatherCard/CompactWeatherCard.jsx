@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { formatDate } from "../../utilities";
-import { CARD_COLORS } from "../../constants";
 import { CARDBACKGROUND } from "../../images";
 import { WeatherCardFooter } from "../WeatherCardFooter";
 
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function CompactWeatherCard({ weatherData, bgColor }) {
   const navigate = useNavigate();
+
   const customCardStyles = {
     backgroundColor: bgColor,
     backgroundImage: `url(${CARDBACKGROUND})`,
@@ -17,9 +17,11 @@ export function CompactWeatherCard({ weatherData, bgColor }) {
     backgroundRepeat: "no-repeat",
     backgroundPositionX: "center",
   };
+
   const navigateToExpandedCardView = () => {
     navigate(`city/${weatherData.name}`, { state: { weatherData, bgColor } });
   };
+
   return (
     <div
       className=" text-light d-flex flex-column rounded-3 overflow-hidden"
@@ -31,7 +33,7 @@ export function CompactWeatherCard({ weatherData, bgColor }) {
         </div>
         <div className="m-1 m-md-4 px-1 d-flex justify-content-between">
           <div className="d-flex flex-column justify-content-between">
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column align-items-center">
               <span className="fs-3">
                 {" "}
                 {`${weatherData.name}, ${weatherData.country}`}{" "}
@@ -61,7 +63,6 @@ export function CompactWeatherCard({ weatherData, bgColor }) {
           </div>
         </div>
       </div>
-
       <WeatherCardFooter weatherData={weatherData} />
     </div>
   );

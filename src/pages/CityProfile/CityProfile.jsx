@@ -8,7 +8,7 @@ export function CityProfile() {
   const bgColor = state.bgColor;
 
   return (
-    <div className="w-75 w-md-50 m-auto my-5">
+    <div className="w-50 m-auto my-5 custom-city-profile-page-wrapper">
       <ExpandedWeatherCard weatherData={weatherData} bgColor={bgColor} />
     </div>
   );

@@ -1,6 +1,7 @@
 import Routes from "./Routes";
 import { Footer, Header } from "./components";
-import { appStyles } from "./styles";
+import "bootstrap/dist/css/bootstrap.css";
+import "./styles/App.style.css";
 
 function App() {
   return (

@@ -45,7 +45,6 @@ export function ExpandedWeatherCard({ weatherData, bgColor }) {
         <div className="m-5 px-1 d-flex flex-column-reverse flex-lg-row justify-content-center gap-5">
           <div className="d-flex flex-column justify-content-center align-items-center fs-5">
             <img
-              className="w-50"
               src={`http://openweathermap.org/img/w/${weatherData.icon}.png`}
               alt="weather-icon"
             />
