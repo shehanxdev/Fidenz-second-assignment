@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders correctly 1`] = `
+<header
+  className="text-center  d-flex justify-content-center align-items-center mt-5"
+>
+  <img
+    alt="Logo icon"
+    src="image-file-stub"
+  />
+</header>
+`;
