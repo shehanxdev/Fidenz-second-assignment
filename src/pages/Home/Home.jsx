@@ -62,7 +62,7 @@ export const Home = () => {
 
   if (weatherData) {
     return (
-      <div className="my-4 my-md-5">
+      <div className="my-5 my-md-5">
         <SearchBar />
         <div className="d-flex justify-content-center px-5 d-md-block w-100 my-md-5">
           <div className="my-5 m-md-auto" style={{ width: "fit-content" }}>
