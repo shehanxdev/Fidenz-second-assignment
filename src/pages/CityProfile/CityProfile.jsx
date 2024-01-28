@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { CompactWeatherCard, ExpandedWeatherCard } from "../../components";
+import { ExpandedWeatherCard } from "../../components";
 
 export function CityProfile() {
   const { state } = useLocation();
